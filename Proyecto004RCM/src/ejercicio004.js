@@ -110,5 +110,6 @@ db.coches.insertMany([
  db.coches.find( { "Nombre": { $regex: /Seat/} } )// Find con el regex de coches Seat
  db.coches.find({"año de fabricacion": {$lt: 2000 }})// Find con coches anteriores al año 2000
  db.coches.find( { "Nombre": { $regex: /^S/i} }) //Find con regex para que de los coches que empiezan por una S y sin distinguir entre mayúsculas o minúsculas
-db.coches.find( { "motor": { $in: ["4 cilindros en línea","gasolina"]}})//Find de coches de gasolina y de 4 cilindros
-db.coches.find({$nor:[{"motor.cilindros":"3 cilindros en línea"},{"motor.combustible":"diesel"}]})//Find de coches que no son de 3 cilindros y ni diesel
+ db.coches.find({$nor:[{"motor.cilindros":"3 cilindros en línea"},{"motor.combustible":"diesel"}]})//Find de coches que no son de 3 cilindros y ni diesel
+ db.coches.find( { "motor": { $in: ["4 cilindros en línea","gasolina"]}})//Find de coches de gasolina y de 4 cilindros
+
